@@ -6,6 +6,10 @@ $username = "root";
 $password = ""; 
 $database = "user"; 
 
+$name=$_GET['n'];
+$r=$_GET['r'];
+$e=$_GET['e'];
+
 
 $connect=mysqli_connect($servername,$username,$password,$database);
 
@@ -20,7 +24,7 @@ if(!$connect){
 }
 
 
-$sql = "INSERT INTO student(name, roll, email) VALUES('seam', '639077', 'se@gmail.com')";
+$sql = "INSERT INTO student(name, roll, email) VALUES('$name', '$roll', '$email')";
 
 
 $result= mysqli_query($connect,$sql);
